@@ -1,6 +1,8 @@
+// Adapted from the Lynda.com C++ Game Programming 2 Course.
+
 #pragma once
-#ifndef TEXTURE_HOLDER_H
-#define TEXTURE_HOLDER_H
+#ifndef FTEXTURE_HOLDER_H
+#define FTEXTURE_HOLDER_H
 
 #include <SFML/Graphics.hpp>
 #include <map>
@@ -21,4 +23,4 @@ private:
 	static FTextureHolder* Instance;
 };
 
-#endif // TEXTURE_HOLDER_H
+#endif // FTEXTURE_HOLDER_H

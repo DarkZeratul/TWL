@@ -1,9 +1,15 @@
+// Adapted from the Lynda.com C++ Game Programming 2 Course.
+
 #pragma once
+#ifndef FENGINE_H
+#define FENGINE_H
 
 #include <SFML/Graphics.hpp>
 #include "FTextureHolder.h"
 
 using namespace sf;
+
+// Unreal Friendly Syntax
 using int32 = int;
 
 class FEngine
@@ -22,7 +28,7 @@ private:
 
 	const int32 GRAVITY = 300;
 
-	RenderWindow RenderWindow; // Regular RenderWindow.
+	RenderWindow Window; // Regular RenderWindow.
 
 	// Main Views.
 	View MainView;	// Fullscreen
@@ -48,7 +54,7 @@ private:
 	bool bIsSplitScreem = false; // Starts in Full Screen Mode.
 
 	// Keep Track of the Time Left in the Current Level.
-	float bTimeRemaining = 10;
+	float TimeRemaining = 10;
 	Time GameTotalTime;
 
 	// Keeps Track whether a New Level is required.
@@ -58,4 +64,6 @@ private:
 	void Update(float);
 	void Draw();
 };
+
+#endif // FENGINE_H
 
