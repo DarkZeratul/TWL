@@ -31,8 +31,20 @@ void FEngine::Input()
 			// Switch between Fullscreen and Splitscreen
 			if (Keyboard::isKeyPressed(Keyboard::E))
 			{
-				bIsSplitScreem = !bIsSplitScreem;
+				bIsSplitScreen = !bIsSplitScreen;
 			}
 		}
+	}
+
+	// Handle Thomas' Inputs
+	if (Thomas.HandleInput())
+	{
+		// TODO: Thomas Jump Sound
+	}
+
+	// Handle Bob's Inputs
+	if (Bob.HandleInput())
+	{
+		// TODO: Bob Jump Sound
 	}
 }

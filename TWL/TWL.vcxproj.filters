@@ -33,12 +33,30 @@
     <ClCompile Include="Draw.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FPlayableCharacter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FThomas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FBob.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FTextureHolder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FEngine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FPlayableCharacter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FThomas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FBob.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

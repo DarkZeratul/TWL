@@ -6,6 +6,8 @@
 
 #include <SFML/Graphics.hpp>
 #include "FTextureHolder.h"
+#include "FThomas.h"
+#include "FBob.h"
 
 using namespace sf;
 
@@ -22,6 +24,9 @@ public:
 
 private:
 	FTextureHolder TextureHolder;
+
+	FThomas Thomas;
+	FBob Bob;
 
 	const int32 TILE_SIZE = 50;
 	const int32 VERTICES_IN_QUAD = 4;
@@ -51,7 +56,7 @@ private:
 	// Keeps Track whether Character 1 is focused. False = Character 2 is focused.
 	bool bIsCharacter1Focused = true; // Fullscreen Only.
 
-	bool bIsSplitScreem = false; // Starts in Full Screen Mode.
+	bool bIsSplitScreen = false; // Starts in Full Screen Mode.
 
 	// Keep Track of the Time Left in the Current Level.
 	float TimeRemaining = 10;
@@ -63,7 +68,6 @@ private:
 	void Input();
 	void Update(float);
 	void Draw();
-};
-
+}; 
 #endif // FENGINE_H
 
