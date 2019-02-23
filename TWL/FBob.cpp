@@ -1,5 +1,6 @@
-#include "FBob.h"
+// Adapted from the Lynda.com C++ Game Programming 2 Course.
 
+#include "FBob.h"
 
 FBob::FBob()
 {

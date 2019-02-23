@@ -13,6 +13,8 @@ void FEngine::Draw()
 		Window.draw(BgSprite);
 		Window.setView(LeftView);
 
+		Window.draw(VertexArrayLevel, &TextureTiles); // Draw the Level
+
 		// Draw Bob and Thomas on the Right Side of the Screen
 		Window.draw(Bob.GetSprite());
 		Window.draw(Thomas.GetSprite());
@@ -21,6 +23,8 @@ void FEngine::Draw()
 		Window.setView(BgRightView);
 		Window.draw(BgSprite);
 		Window.setView(RightView);
+
+		Window.draw(VertexArrayLevel, &TextureTiles); // Draw the Level
 
 		// Draw Thomas and Bob on the Left Side of the Screen
 		Window.draw(Thomas.GetSprite());
@@ -31,6 +35,8 @@ void FEngine::Draw()
 		Window.setView(BgMainView);
 		Window.draw(BgSprite);
 		Window.setView(MainView);
+
+		Window.draw(VertexArrayLevel, &TextureTiles); // Draw the Level
 
 		// Draw Thomas and Bob
 		Window.draw(Thomas.GetSprite());

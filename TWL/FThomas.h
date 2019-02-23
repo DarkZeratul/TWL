@@ -1,3 +1,5 @@
+// Adapted from the Lynda.com C++ Game Programming 2 Course.
+
 #pragma once
 #include "FPlayableCharacter.h"
 #include "FTextureHolder.h"

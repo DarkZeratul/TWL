@@ -122,11 +122,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DetectCollisions.cpp" />
     <ClCompile Include="Draw.cpp" />
     <ClCompile Include="FBob.cpp" />
     <ClCompile Include="FEngine.cpp" />
+    <ClCompile Include="FLevelManager.cpp" />
     <ClCompile Include="FPlayableCharacter.cpp" />
     <ClCompile Include="Input.cpp" />
+    <ClCompile Include="LoadLevel.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="FTextureHolder.cpp" />
     <ClCompile Include="FThomas.cpp" />
@@ -135,6 +138,7 @@
   <ItemGroup>
     <ClInclude Include="FBob.h" />
     <ClInclude Include="FEngine.h" />
+    <ClInclude Include="FLevelManager.h" />
     <ClInclude Include="FPlayableCharacter.h" />
     <ClInclude Include="FTextureHolder.h" />
     <ClInclude Include="FThomas.h" />

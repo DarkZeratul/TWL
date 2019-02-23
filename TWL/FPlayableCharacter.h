@@ -1,3 +1,4 @@
+// Adapted from the Lynda.com C++ Game Programming 2 Course.
 
 #pragma once
 #ifndef FPlayableCharacter_H

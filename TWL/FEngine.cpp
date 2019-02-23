@@ -5,10 +5,10 @@
 FEngine::FEngine()
 {
 	Vector2f Resolution;
-	Resolution.x = VideoMode::getDesktopMode().width;
-	Resolution.y = VideoMode::getDesktopMode().height;
+	Resolution.x = VideoMode::getDesktopMode().width * 1.0f;
+	Resolution.y = VideoMode::getDesktopMode().height* 1.0f;
 
-	Window.create(VideoMode(Resolution.x, Resolution.y), "Thomas Was Late", Style::Resize);
+	Window.create(VideoMode(int32(Resolution.x), int32(Resolution.y)), "Thomas Was Late", Style::Resize);
 
 	// Initialize the Fullscreen View
 	MainView.setSize(Resolution);
@@ -26,6 +26,9 @@ FEngine::FEngine()
 	BgTexture = FTextureHolder::GetTexture("Graphics/background.png");
 
 	BgSprite.setTexture(BgTexture); // Associate the Sprite with the Texture.
+
+	// Load the Texture of the Background Vertex Array.
+	TextureTiles = FTextureHolder::GetTexture("Graphics/tiles_sheet.png");
 }
 
 

@@ -8,12 +8,8 @@ void FEngine::Update(float DtAsSeconds)
 {
 	if (bIsNewLevelRequired)
 	{
-		// Spawn Thomas and Bob
-		Thomas.Spawn(Vector2f(0,0), GRAVITY);
-		Bob.Spawn(Vector2f(100, 0), GRAVITY);
-
-		TimeRemaining = 10;
-		bIsNewLevelRequired = false;
+		// Load a Level
+		LoadLevel();
 	}
 	
 	if (bIsPlaying)
@@ -21,6 +17,28 @@ void FEngine::Update(float DtAsSeconds)
 		// Update Thomas and Bob
 		Thomas.Update(DtAsSeconds);
 		Bob.Update(DtAsSeconds);
+
+		// Detect Collisions and Check whether Thomas and Bob have reached the Goal.
+		if (DetectCollisions(Thomas) && DetectCollisions(Bob))
+		{
+			bIsNewLevelRequired = true;
+
+			// TODO: Play the Reached Goal Sound.
+		}
+		else
+		{
+			DetectCollisions(Bob);
+		}
+
+		// Allow Bob and Thomas to jump on each other Heads.
+		if (Bob.GetFeet().intersects(Thomas.GetHead()))
+		{
+			Bob.StopFalling(Thomas.GetHead().top);
+		}
+		else if (Thomas.GetFeet().intersects(Bob.GetHead()))
+		{
+			Thomas.StopFalling(Bob.GetHead().top);
+		}
 
 		// Counts Down the Time the Player has left.
 		TimeRemaining -= DtAsSeconds; 

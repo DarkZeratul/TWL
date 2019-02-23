@@ -1,3 +1,5 @@
+// Adapted from the Lynda.com C++ Game Programming 2 Course.
+
 #include "FPlayableCharacter.h"
 
 

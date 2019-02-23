@@ -8,6 +8,7 @@
 #include "FTextureHolder.h"
 #include "FThomas.h"
 #include "FBob.h"
+#include "FLevelManager.h"
 
 using namespace sf;
 
@@ -27,6 +28,8 @@ private:
 
 	FThomas Thomas;
 	FBob Bob;
+
+	FLevelManager LevelManager;
 
 	const int32 TILE_SIZE = 50;
 	const int32 VERTICES_IN_QUAD = 4;
@@ -65,9 +68,22 @@ private:
 	// Keeps Track whether a New Level is required.
 	bool bIsNewLevelRequired = true;
 
+	// Vertex Array for the Level Design.
+	VertexArray VertexArrayLevel;
+
+	// 2D Array w/ the Map for the Level.
+	int32** ArrayLevel = NULL;
+
+	// Texture for the Background and Level Tiles.
+	Texture TextureTiles;
+
 	void Input();
 	void Update(float);
 	void Draw();
+
+	void LoadLevel(); // Loads a New Level
+
+	bool DetectCollisions(FPlayableCharacter&); // Polymorphism
 }; 
 #endif // FENGINE_H
 
